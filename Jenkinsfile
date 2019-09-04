@@ -27,11 +27,12 @@ pipeline {
      post {
         always {
             echo 'This will always run'
-            archiveArtifacts artifacts: 'build/libs/**/*.jar', fingerprint: true
-            junit 'build/reports/**/*.xml'
         }
         success {
             echo 'This will run only if successful'
+            mail to: 'Sachin.Tanna@ibm.com',
+             subject: "Success",
+             body: "Congratulations, you now know how to send emails from Jenkins"
         }
         failure {
             echo 'This will run only if failed'
