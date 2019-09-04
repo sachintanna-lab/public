@@ -30,9 +30,9 @@ pipeline {
         }
         success {
             echo 'This will run only if successful'
-            mail to: 'Sachin.Tanna@ibm.com',
-             subject: "Success",
-             body: "Congratulations, you now know how to send emails from Jenkins"
+            slackSend channel: '#sample-jenkins-messaging',
+                  color: 'good',
+                  message: "The pipeline completed successfully."
         }
         failure {
             echo 'This will run only if failed'
