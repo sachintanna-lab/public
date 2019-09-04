@@ -2,7 +2,7 @@ pipeline {
     agent any
     
     environment {
-        DISABLE_AUTH = 'true'
+        DISABLE_AUTH = credentials('jenkins_credentials')
         DB_ENGINE    = 'sqlite'
     }
 
