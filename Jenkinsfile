@@ -6,6 +6,7 @@ pipeline {
             steps {
                 retry(3) {
                 echo 'Building..'
+                rehthetjety
                 }
             }
         }
