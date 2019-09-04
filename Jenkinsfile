@@ -4,9 +4,8 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                retry(3) {
+                timeout(time: 3, unit: 'MINUTES') {
                 echo 'Building..'
-                rehthetjety
                 }
             }
         }
