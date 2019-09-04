@@ -10,7 +10,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'I am being read'
-                echo 'Environment variable read: ${DISABLE_AUTH}'
+                echo "Environment variable read: ${DISABLE_AUTH}"
             }
         }
         stage('Test') {
