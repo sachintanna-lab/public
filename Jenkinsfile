@@ -4,9 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                timeout(time: 3, unit: 'MINUTES') {
-                echo 'Building..'
-                }
+                echo 'I am being read'     
             }
         }
         stage('Test') {
